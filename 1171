@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+        String a ,b ;
+        int x,n =sc.nextInt(),v[] = new int[100100];
+        for(int i=0;i<n;i++){
+            x = sc.nextInt();
+            v[x]++;
+        }
+        for(int i=0;i<2001;i++){
+            if(v[i]!=0) sa.println(i+" aparece "+v[i]+" vez(es)");
+        }
+
+    }
+}
