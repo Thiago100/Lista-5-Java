@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static long[] vetor=new long[66];
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+        int a[] = new int[1000005],n = sc.nextInt();
+        while(n!=0){
+            a[0] = 1;
+            a[1] = 1;
+            for(int i=2;i<=n;i++){
+                a[i] = a[i-1] + a[i-2];
+            }
+            sa.println(a[n]);
+            n = sc.nextInt();
+        }
+
+    }
+}
