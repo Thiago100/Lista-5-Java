@@ -1,0 +1,23 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int n=sc.nextInt(),a[],x=0;
+		a = new int[n];
+		a[0] = sc.nextInt();
+		int menor = a[0];
+		for(int i=1;i<n;i++){
+			a[i] = sc.nextInt();
+			if(a[i]<menor) {
+				x = i;
+				menor = a[i];
+			}
+			
+		}
+		sa.println("Menor valor: "+a[x]+"\nPosicao: "+x);
+		
+		
+	}
+ }
