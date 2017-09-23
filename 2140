@@ -1,0 +1,41 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+        long a[];
+        a = new long[100100];
+        a[0] = 7;
+        a[1] = 12;
+        a[2] = 15;
+        a[3] = 22;
+        a[4] = 25;
+        a[5] = 30;
+        a[6] = 52;
+        a[7] = 55;
+        a[8] = 60;
+        a[9] = 102;
+        a[10] = 105;
+        a[11] = 110;
+        a[12] = 150;
+        a[13] = 70;
+        a[14] = 120;
+        long x=sc.nextLong(),y=sc.nextLong(),k=0,l=0;
+        while(l!=1){
+                for(int i=0;i<15;i++){
+                    if(y-x == a[i]){
+                        sa.println("possible");
+                        k++;
+                        break;
+                    }
+                }
+                if(k==0) sa.println("impossible");
+                k = 0 ;
+                x=sc.nextLong();y = sc.nextLong();
+                if(x==0 && y==0) l=1;
+        }
+
+
+    }
+}
