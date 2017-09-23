@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
+		PrintStream sa = System.out;
+        int a[] = new int[5],b[] = new int[5],t=0,i;
+        for(i=0;i<5;i++) a[i] = sc.nextInt();
+        for(i=0;i<5;i++) b[i] = sc.nextInt();
+        for(i=0;i<5;i++) {
+            if(a[i]==b[i]){
+                sa.println("N");
+                break;
+            }else t++;
+        }
+        if(t==5) sa.println("Y");
+	}
+ }
