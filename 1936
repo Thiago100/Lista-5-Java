@@ -1,0 +1,19 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	static final int[] a = {40320, 5040, 720, 120, 24, 6, 2, 1};	
+	public static void main (String[] args){
+		PrintStream sa = System.out;
+		Scanner sc=new Scanner(System.in);
+		int soma = 0 ,x,i=0,n=sc.nextInt();
+		while(n!=0){
+			if(n>=a[i]){
+				x = n/a[i];
+				soma+=x;
+				n-=x*a[i];
+			}
+			i++;
+		}
+		sa.println(soma);
+	}
+}
