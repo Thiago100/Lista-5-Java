@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+        long a[],x;
+        a = new long[100100];
+        a[0] = 0;
+        a[1] = 1;
+        a[2] = 1;
+        a[3] = 1;
+        a[4] = 2;
+        a[5] = 2;
+        a[6] = 4;
+        a[7] = 8;
+        a[8] = 12;
+        for(int i=9;i<18;i++){
+            if(i%2==0) a[i] = a[i-1]+a[i-2];
+            else a[i]= a[i-1]*a[i-2];
+        }
+        while(sc.hasNext()){
+            int n = sc.nextInt();
+            sa.println(a[n-1]);
+        }
+
+    }
+}
