@@ -1,0 +1,22 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int a[],i=0;
+		a = new int[100100];
+		a[0] = sc.nextInt();
+		int maior = a[0];
+		while(a[i]!=0){
+			if(a[i]>maior){
+				maior = a[i];
+			}
+			i++;
+			a[i] = sc.nextInt();
+		}
+		sa.println(maior);
+		
+		
+	}
+ }
