@@ -1,0 +1,24 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int x=0,z=0,n = sc.nextInt();
+		for(int i=0;i<n;i++){
+			x = sc.nextInt();
+			int m=0,v[] = new int[x],l=0,k=0;
+			for(int j=0;j<x;j++){
+				v[j] = sc.nextInt();
+				m = Math.max(m,v[j]);
+			}
+			for(int j=0;j<x;j++){
+				if(m == v[j]) l++;
+				else l=0;
+				k=Math.max(k,l);
+			}
+			sa.println("Caso #"+(i+1)+": "+k);
+		}
+		
+	}
+}
