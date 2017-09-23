@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	public static void main(String[] args){
+        PrintStream sa = System.out;
+        Scanner sc = new Scanner(System.in);
+        double v[];
+        v = new double[100];
+        for(int i=0;i<100;i++){
+            v[i] = sc.nextDouble();
+        }
+        for(int i=0;i<100;i++){
+            if(v[i]<=10) sa.printf("A[%d] = %.1f\n",i,v[i]);
+
+        }
+
+	}
+}
