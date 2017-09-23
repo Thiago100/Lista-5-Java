@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+    public static void main(String[] args){
+        PrintStream sa = System.out;
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(),saldo = sc.nextInt(),x,z = 100000000;
+        for (int i=0;i<n;i++){
+            x = sc.nextInt();
+            saldo+=x;
+            if(saldo<z) z = saldo;
+        }
+        sa.println(z);
+
+    }
+}
