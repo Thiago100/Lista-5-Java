@@ -1,0 +1,20 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int a,i=0,n,x=0;
+		a = sc.nextInt();
+		n = sc.nextInt();
+		for(i=0;i<n;i++){
+			x = sc.nextInt();
+			a+=x;
+			if(a>=100) a = 100;
+			if(a<=0) a = 0;
+		}
+		if(a>=0) sa.println(a);
+		else sa.println("0");
+		
+	}
+ }
