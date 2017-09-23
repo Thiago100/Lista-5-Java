@@ -1,0 +1,18 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	public static void main(String[] args){
+        PrintStream sa = System.out;
+        Scanner sc = new Scanner(System.in);
+        int v[];
+        v = new int[10];
+        for(int i=0;i<10;i++){
+            v[i] = sc.nextInt();
+            if(v[i]<=0) v[i] = 1;
+        }
+        for(int i = 0;i<10;i++){
+            sa.println("X["+i+"] = "+v[i]);
+        }
+
+	}
+}
