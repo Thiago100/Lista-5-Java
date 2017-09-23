@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int p[] = new int[5], i[] = new int[5], cont=0, v[] = new int[15],t=0,a=0,oc=0,ou=0;
+       do{
+           v[cont] = sc.nextInt();
+           if (v[cont]%2==0){
+               p[t]=v[cont];
+               t++;
+           }
+           else{
+               i[a]=v[cont];
+               a++;
+           }
+           if(t>4){
+               t=0;
+               do{
+                  sa.printf ("par[%d] = %d\n",oc,p[oc]);
+                   p[oc]=0;
+                   oc++;
+               }while(oc<5);
+           }
+           if(a>4){
+               a=0;
+               do{
+                    sa.printf ("impar[%d] = %d\n",ou,i[ou]);
+                    i[ou]=0;
+                    ou++;
+               }while(ou<5);
+           }
+           cont++;
+       }while(cont<15);
+       for (cont=0;cont<5;cont++){
+           if (i[cont]!=0) sa.printf ("impar[%d] = %d\n",cont,i[cont]);
+       }
+       for (cont=0;cont<5;cont++){
+           if (p[cont]!=0) sa.printf ("par[%d] = %d\n",cont,p[cont]);
+       }
+
+    }
+}
