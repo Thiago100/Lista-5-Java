@@ -1,0 +1,25 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int soma=0,x,n = sc.nextInt(),m = sc.nextInt(),l=1;
+		while(l!=0){
+            int a[] = new int[1000005];
+            for(int i=0;i<m;i++){
+                x = sc.nextInt();
+                a[x]++;
+                if(a[x]==2){
+                    soma++;
+                }
+            }
+            sa.println(soma);
+            soma=0;
+            n = sc.nextInt();m = sc.nextInt();
+            if(n==0 && m==0) l=0;
+		}
+
+
+    }
+}
