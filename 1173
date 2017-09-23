@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	public static void main(String[] args){
+        PrintStream sa = System.out;
+        Scanner sc = new Scanner(System.in);
+        int v[],n = sc.nextInt();
+        v = new int[10];
+        for(int i=0;i<10;i++){
+            v[i] = n;
+            sa.println("N["+i+"] = "+v[i]);
+            n=n*2;
+        }
+
+	}
+}
