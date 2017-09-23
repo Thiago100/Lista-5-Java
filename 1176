@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+public class Main{
+	public static void main(String[] args){
+        PrintStream sa = System.out;
+        Scanner sc = new Scanner(System.in);
+        long a[];
+        a = new long[100];
+        int n = sc.nextInt(),j;
+        a[0] = 0;
+        a[1] = 1;
+        for(int i=2;i<61;i++){
+            a[i] = a[i-2]+a[i-1];
+        }
+        for(int i=0;i<n;i++){
+            j = sc.nextInt();
+            sa.println("Fib("+j+") = "+a[j]);
+        }
+
+	}
+}
