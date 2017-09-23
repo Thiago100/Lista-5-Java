@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(),v[] = new int [n],x=1;
+		for(int i=0;i<n;i++) v[i] = sc.nextInt();
+		if(n>2){
+			for(int i=1;i<n-1;i++){
+				if(v[i-1]<v[i] && v[i]>v[i+1] || v[i-1]>v[i] && v[i]<v[i+1] && x==1) x=1;
+				else x=0;
+			}
+		}else{ 
+			if(v[0]==v[1]) x=0;
+		}
+		if(x==1) sa.println("1");
+		else sa.println("0");
+		x = 1;
+	}
+}
