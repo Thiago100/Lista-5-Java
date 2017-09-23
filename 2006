@@ -1,0 +1,14 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int n=0,a = sc.nextInt();
+		for(int i=0;i<5;i++){
+			int x = sc.nextInt();
+			if(x==a) n++;
+		}sa.println(n);
+		
+	}
+ }
