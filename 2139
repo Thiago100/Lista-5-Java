@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int x,a;
+		while(sc.hasNext()){
+			x = sc.nextInt();a = sc.nextInt();
+			if(x==12 && a==25) sa.println("E natal!");
+			if(x==12 && a>25) sa.println("Ja passou!");
+			if(x==12 && a<24) sa.println("Faltam "+(25-a)+" dias para o natal!");
+			if(x==12 && a==24) sa.println("E vespera de natal!");
+			if(x==11) sa.println("Faltam "+(25-a+30)+" dias para o natal!");
+			if(x==10) sa.println("Faltam "+(25-a+30+31)+" dias para o natal!");
+			if(x==9) sa.println("Faltam "+(25-a+30+31+30)+" dias para o natal!");
+			if(x==8) sa.println("Faltam "+(25-a+30+31+30+31)+" dias para o natal!");
+			if(x==7) sa.println("Faltam "+(25-a+30+31+30+31+31)+" dias para o natal!");
+			if(x==6) sa.println("Faltam "+(25-a+30+31+30+31+31+30)+" dias para o natal!");
+			if(x==5) sa.println("Faltam "+(25-a+30+31+30+31+31+30+31)+" dias para o natal!");
+			if(x==4) sa.println("Faltam "+(25-a+30+31+30+31+31+30+31+30)+" dias para o natal!");
+			if(x==3) sa.println("Faltam "+(25-a+30+31+30+31+31+30+31+30+31)+" dias para o natal!");
+			if(x==2) sa.println("Faltam "+(25-a+30+31+30+31+31+30+31+30+31+29)+" dias para o natal!");
+			if(x==1) sa.println("Faltam "+(25-a+30+31+30+31+31+30+31+30+31+29+31)+" dias para o natal!");	
+		}
+		
+	}
+ }
