@@ -1,0 +1,15 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int n = sc.nextInt(),j=0;
+		for(int i=0;i<1000;i++){
+			sa.println("N["+i+"] = "+j);
+			j++;
+			if(j==n) j=0;
+			
+		}
+	}
+ }
