@@ -1,0 +1,21 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static void main(String[] args) {
+		PrintStream sa = System.out;
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		while(n!=0){
+			long v[] = new long [n],soma=0;
+			for(int i=0;i<n;i++) v[i] = sc.nextInt();
+			for(int i=n-2;i>=0;i--){
+				for(int j=n-1;j>i;j--){
+					v[i]+=v[j];
+				}
+			}
+			for(int i=0;i<n;i++) soma+=v[i];
+			sa.println(soma);
+			n = sc.nextInt();
+		}
+	}
+}
