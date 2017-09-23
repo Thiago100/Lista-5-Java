@@ -1,0 +1,40 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+	public static void main(String args[]){
+		Scanner sc = new Scanner(System.in);
+		PrintStream sa = System.out;
+		int I,T = sc.nextInt(),P2,P,M,MA;
+		int J[]=new int[1001];
+		while(T!=0){
+			J[0] = sc.nextInt();J[1] = sc.nextInt();
+			if (J[0]>J[1]){
+			    MA = J[0];
+			    M = J[1];
+			    P = 1;
+			    P2 = 0;
+			}else{
+			  	MA = J[1];
+			    M = J[0];
+			    P = 0;
+			    P2 = 1;
+			}
+			for (I=2;I<T;I++){
+			    J[I] = sc.nextInt();
+				if (J[I]>MA){
+				        M = MA;
+				  MA = J[I];
+				  P = P2;
+				  P2 = I;
+				}
+				else if(J[I]>M){
+				    M = J[I];
+				    P = I;
+				}
+			}
+			sa.printf("%d\n",P+1);
+			T = sc.nextInt();
+		}
+
+	}
+ }
